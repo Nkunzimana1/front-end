@@ -1,0 +1,614 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intama business group</title>
+    <style>
+    body{
+    align-items: center;
+    justify-content: center;
+    }
+body {background-color: whitesmoke;
+    }
+
+    .container1 {
+      position: relative;
+      margin-top: 20px;
+      text-align: center;
+      display: flex;
+    }
+
+    .brand-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand-title {
+      font-family: 'forte', cursive;
+      font-size: 1.5rem;
+      color: black;
+      position: relative;
+      z-index: 2;
+    }
+
+    .subtitle {
+      font-size: 0.6rem;
+      margin-top: 10px;
+      color: rgb(27, 5, 5);
+      opacity: 0.8;
+    }
+
+    .shopping-icon {
+      font-size: 40px;
+      color: rgb(12, 1, 1);
+      position: absolute;
+      top: 40%;
+      left: -80px;
+      transform: translateY(-50%);
+      animation: slide-across 10s ease-in-out forwards;
+      z-index: 1;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes slide-across {
+      0% {
+        left: -60px;
+        opacity: 0;
+        transform: translateY(-50%) rotate(-20deg);
+      }
+      20% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        left: 100%;
+        opacity: 0;
+        transform: translateY(-50%) rotate(20deg);
+      }
+    }
+    .detail{
+      background-color: whitesmoke;
+      display: flex;
+    }
+    .location {
+      position: relative;
+      margin-top: 30px;
+      text-align: center;
+      display: flex;
+    }
+    .location a{
+      margin-top: 15px;
+      text-decoration: none;
+      color: black;
+    }
+    .location a:hover{
+      margin-top: 15px;
+      text-decoration: underline;
+      color: blue;
+    }
+    .login{
+      text-align: center;
+      color: white;
+      background-color: blue;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 10px;
+      width: 80px;
+      height: 50px;
+      box-shadow: 0 80px 200px white;
+    }
+    .login a{
+      text-decoration: none;
+      text-align: center;
+      color: white;
+    }
+
+button:hover{
+    background-color: red;
+	border: 2px solid red;
+}
+body{
+     margin: 0;
+    padding: 0;
+    background-color:white;
+}
+.header{
+    color: aqua;
+    top:0;
+    padding: 4px;
+    width: 100vw;
+    height: 50px;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.3rem;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgb(204, 203, 203);
+}
+h2{
+  color: black;
+}
+:root{
+      --bg:#0f172a;      
+      --card:#111827;     
+      --muted:#94a3b8;  
+      --text:#e5e7eb;   
+      --accent:#22c55e;   
+      --accent-2:#16a34a;  
+      --ring:#22c55e55;
+    }
+    .k {
+        color: black;
+      font-size: 30px;
+      text-align: center;
+    }
+*{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,whitesmoke);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    header{padding:28px 20px;display:flex;align-items:center;justify-content:center}
+    header h1{margin:0;font-size:clamp(22px,3vw,32px);letter-spacing:.3px}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px 40px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+    .card{background:linear-gradient(180deg,whitesmoke);border:1px solid whitesmoke;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .img-wrap{position:relative;padding:14px}
+    .img-wrap img{width:100%;height:180px;object-fit:cover;border-radius:12px;border:1px solid whitesmoke}
+    .content{padding:14px 16px 18px}
+    .title{font-weight:600;margin:2px 0 8px;font-size:15px; color: black;}
+    .price{color:#a7f3d0;font-weight:700;margin-bottom:12px; color: #0f172a;}
+    .btn{cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:5px;border:1px solid #1f2937;background:linear-gradient(180deg,#1d293b,#0f1829);color:var(--text);font-weight:600;transition:.15s transform,.2s background,.2s box-shadow}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px var(--ring);background:linear-gradient(180deg,#1f2937)}
+    .badge{display:inline-block;background:#0b8f49;color:white;padding:3px 10px;border-radius:999px;font-size:12px;border:1px solid whitesmoke}
+    footer{color:var(--muted);text-align:center;padding:20px 0 40px;font-size:13px}
+
+.header a{
+    text-decoration: none;
+    color: black;
+}
+.header a:hover{
+    color: red;
+}
+.dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: green;  
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .aboutus{
+      padding: 40px;
+      margin-top: 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      width: 95vw;
+      margin-left: 20px;
+      margin-right: 20px;
+      display: flex;
+      height: 62%;
+    }
+.about{
+  margin-top: 20px;
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+}
+.story{
+  margin-right: 60px;
+  margin-left: 20px;
+  display: block;
+  text-decoration: none;
+  font-size: medium;
+  color: black;
+  width: 55vw;
+
+}
+.ceo{
+  margin-left: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  height: 130%;
+}
+.socialmedia{
+  display: block;
+  margin-left: 20px;
+  font-size: large;
+  color: black;
+  width: 15%;
+  height: 32%;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.socialmedia a{
+  text-decoration: none;
+  color: black;
+}
+.socialmedia a:hover{
+  text-decoration: underline;
+  color: blue;
+}
+.footer{
+  background-color: black;
+  height: 70%;
+  margin-top: 20px;
+  display: flex;
+}
+.logo{
+  display: block;
+  margin-right: 70px;
+}  
+.find{
+  color: white;
+  font-family: 'Times New Roman', Times, serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  margin-top: 80px;
+}
+.find a{
+  color: white;
+  font-family: 'Times New Roman', Times, serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  margin-top: 80px;
+  text-decoration: none;
+}
+.find a:hover{
+  text-decoration: underline;
+  color: blue;
+}
+.cont{
+  color: white;
+  font-family: 'Times New Roman', Times, serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  margin-top: 80px;
+  display: block;
+  margin-left: 80px;
+}
+.cont a{
+  color: white;
+  font-family: 'Times New Roman', Times, serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  margin-top: 80px;
+  text-decoration: none;
+}
+.cont a:hover{
+  text-decoration: underline;
+  color: blue;
+}
+.ff{
+ background-color: black;
+  height: 15%;
+  margin-top: -60px; 
+}
+.online{
+  display: flex;
+  font-size: medium;
+  color: white;
+  width: 100%;
+  margin-top: 20px;
+}
+.need{
+  display: block;
+  text-align: center;
+  width: 35%;
+  height: 40%;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #2c3e50;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.need1{
+  display: block;
+  text-align: center;
+  width: 35%;
+  height: 40%;
+  margin-top: 20px;
+  margin-left: 200px;
+  background-color: black;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.follow{
+  display: flex;
+  background-color: white;
+}
+
+.team{
+  display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
+  height: 70%;
+}
+
+    </style>
+    <link rel="icon" href="INTAMA Business Group Logo Design.png" type="image/png">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="INTAMA Business Group Logo Design.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="detail">
+     <div class="container1">
+    <i class="fas fa-shopping-cart shopping-icon"></i>
+    <div class="brand-box">
+      <div class="brand-title">Intama Business Group</div>
+      <div class="subtitle">Buying better product online & free delivery</div>
+    </div>
+  </div>
+  
+ <div class="location" style="display: flex;">
+    <img src="location.png" alt="" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 20px; margin-right: 10px; margin-left: 60px; border-radius: 15px;"> <a href="">RN3  kwarubangura kigali Rwanda</a>
+ <img src="phone.png" alt="" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 20px; margin-right: 15px; border-radius: 40px; margin-left: 40px; border-radius: 20px;">
+  <a href="">+250 791 515 197</a>
+<div class="media">
+    <img src="shop cart.png" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 40px; margin-right: 15px; border-radius: 0px;">
+ <img src="ig icon.jpg" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 4px; margin-right: 15px; border-radius: 20px;">
+ <img src="facebook.jpg" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 4px; margin-right: 15px; border-radius: 20px;">
+ <img src="email.png" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 4px; margin-right: 15px; border-radius: 20px;">
+ <img src="whatsapp.jpg" style="width: 35px; height:30px; margin-top: 3px; margin-left: 4px; margin-right: 20px; border-radius: 30px;">
+</div>
+  </div>
+     <a href="login.html"  class="btn buy" style="text-decoration: none; margin-top: 30px;">sign up</a>&emsp;&emsp;
+      <a href="login.html" class="btn buy" style="text-decoration: none; margin-top: 30px;">sign in</a><br><br>
+</div>
+</div>
+   <div class="header">
+    &emsp;&emsp;<a href="index.html">home</a>&emsp;&emsp;
+    <a href="about.html" style="color: green;">about us</a>&emsp;&emsp;
+     <div class="dropdown">
+  <button style="font-size: 20px; background-color: rgb(204, 203, 203); border: 1px solid  rgb(204, 203, 203);">services</button>&emsp;
+  <div class="dropdown-content">
+    <a href="laptop1.html">Laptops and accessories</a>
+    <a href="construction.html">Design,Consultancy construction</a>
+    <a href="farming.html">agriculture and farming</a>
+    <a href="event.html">event managament</a>
+  </div>
+</div>&emsp;&emsp;
+    <a href="updates.html">updates</a>&emsp;&emsp;
+    <a href="contact.html">contact us</a>
+   </div>
+  <div class="aboutus">
+    <div class="mission" style="display: block; width: 33vw; margin-right: 20px;">
+  <h1 style="text-align: center; color: black; margin-top: 5px; font-size: x-large;">Mission</h1>
+  <p style="font-size: medium; color: #333;
+  line-height: 1.6; max-width: 600px;">Intama Business Group is committed to providing secure, rel
+  iable, and sustainable services in computer & accessories sales, design and construction consultancy, modern agriculture, and professional event management.
+We strive to:
+
+Empower communities with digital and agricultural solutions.
+
+Promote quality construction through innovative designs.
+
+Deliver memorable and well-managed events.
+
+Maintain customer satisfaction and long-term relationships through trust and service excellence.
+      
+    </p>
+    </div>
+    <div class="value" style="display: block; width: 33vw; margin-right: 20px;">
+  <h1 style="text-align: center; color: black; margin-top: 5px; font-size: x-large;">Value</h1>
+  <p style="font-size: medium; color: #333;
+  line-height: 1.6; max-width: 600px;">Innovation We embrace new ideas and technology in everything we do.
+
+Integrity We work with honesty, professionalism, and transparency.
+
+Quality We ensure high standards in all our services and products.
+
+Customer Focus We prioritize the needs and satisfaction of our clients.
+
+Growth We believe in continuous improvement and business expansion.
+
+Teamwork We work together across sectors to achieve our goals.
+
+Sustainability  We promote practices that protect the environment and support communities.
+      
+    </p>
+    </div>
+    <div class="vision" style="display: block; width: 33vw;">
+  <h1 style="text-align: center; color: black; margin-top: 5px; font-size: x-large;">Vision</h1>
+  <p style="font-size: medium; color: #333;
+  line-height: 1.6; max-width: 600px;">To become a leading, innovative, and trusted multi-
+    sector enterprise in Rwanda and beyond  delivering high-quality solutions in technology, construction, agriculture, and event management. 
+    </p>
+    </div>
+  </div>
+  <div class="about">
+  <div class="story">
+   <h2 style=" color: black;">About Intama Business Group</h2>
+      <p>
+        Intama Business Group is a dynamic Rwandan company dedicated to providing quality solutions 
+        across multiple sectors: technology (computers & accessories), design & construction consultancy, 
+        agriculture and farming, and event management. Founded on a passion for innovation and service 
+        excellence, we offer trusted products and professional services that meet the needs of individuals, 
+        businesses, and communities.
+      </p>
+      <h2 style=" color: black;">Our History</h2>
+      <p>
+        Intama Business Group was established in 2023 by Mr. Eng. IRAMBONA Aime, starting as a small business 
+        specializing in selling computers and accessories. Due to the founder's vision and the growing demand, 
+        the company expanded into design & construction, agriculture & farming, and professional event 
+        management services.
+      </p> 
+  </div>
+  <div class="ceo">
+    <img src="team managers.jpg" alt="wait amoment..." width="95%" height="100%">
+  </div>
+   </div>
+   <h1 style="margin-left: 20px; color: black; margin-top: 120px; font-size: xx-large;">Our Believer Us</h1>
+   <div class="colaboration">
+  &emsp;&emsp;<img src="our believers (7).jpg" alt="">&emsp;
+  <img src="our believers (10).png" alt="">&emsp;
+  <img src="payment (4).jpg" alt="">&emsp;
+  <img src="our believers (3).jpg" alt="">&emsp;
+  <img src="our believers (5).jpg" alt="">
+   </div>
+<div class="Follow">
+  <div class="need">
+  <br><br><h1 style="color: black; font-size:x-large;">Get in Touch with us!</h1>
+  <p style="color: white; font-size: medium; margin-top: 20px;">Ask questions, schedules a meeting or Request a proposal.Let's Get Started</p>
+  
+      <a href="contact.html" class="buy-btn" style="background-color: #2c3e50; color: black;  border-radius: 25px; margin-top: 10px; margin-left: 330px;">contact us now</a>
+  <br>
+</div>
+
+<div class="need1">
+  <br><br><h1 style="color: white; font-size:x-large;">Do You Want To Follow Our Social Media us!</h1>
+  <p style="color: whitesmoke; font-size: medium; margin-top: 20px;">
+
+<div class="simage" style="display: block;
+  margin-top: 20px;
+  margin-left: 80px;">
+  <a href="" style="margin-right: 10px;"><img src="facebook.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;"></a>
+  <a href="" style="margin-right: 10px;"><img src="instragram.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;"></a>
+  <a href="" style="margin-right: 10px;"><img src="tiktok icon.png" alt="" style="width: 30px; height: 30px; border-radius: 20px;"></a>
+  <a href="" style="margin-right: 10px;"><img src="whatsapp.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;"></a>
+</div>
+    
+  </p>
+   <a href="contact.html" class="buy-btn"  style="background-color: black; color: white; border-radius: 5px; margin-top: 10px; margin-left: 330px;">contact us now</a>
+   
+  </div>
+</div>
+  
+<h1 style="margin-left: 20px; color: black; margin-top: 120px; font-size: xx-large;">INTAMA Team Members</h1>
+
+<div class="team">
+<div style="width: 20%; height: 110%; display: block; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-left: 20px;">
+  <img src="ceo.jpg" alt="ceo" width="100%" height="80%" style="border-top-left-radius: 10px; border-top-right-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+  <p class="name" style="font-weight: bold;  margin-top: 10px; color: #333; text-align: center;">Mr Eng Aime IRAMBONA</p>
+  <p class="price1" style=" font-size: 18px; color: green; font-weight: bold; text-align: center;">ceo & co founder</p>
+</div>
+
+<div style="width: 20%; height: 110%; display: block; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-left: 20px;">
+  <img src="papa.jpg" alt="ceo" width="100%" height="80%" style="border-top-left-radius: 10px; border-top-right-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+  <p class="name" style="font-weight: bold;  margin-top: 10px; color: #333; text-align: center;">Mr Theotime KABERUKA RYAHAMA</p>
+  <p class="price1" style="font-size: 18px; color: green; font-weight: bold; text-align: center;">shareholder</p>
+</div>
+
+<div style="width: 20%; height: 110%; display: block; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-left: 20px;">
+  <img src="mama.jpg" alt="ceo" width="100%" height="80%" style="border-top-left-radius: 10px; border-top-right-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+  <p class="name" style="font-weight: bold; margin-top: 10px; color: #333; text-align: center;">Madame Geneieve MUKAMANA</p>
+  <p class="price1" style=" font-size: 18px; color: green; font-weight: bold; text-align: center;">shareholder</p>
+</div>
+
+<div style="width: 20%; height: 110%; display: block; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-left: 20px;">
+  <img src="vie president.jpg" alt="ceo" width="100%" height="80%" style="border-top-left-radius: 10px; border-top-right-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+  <p class="name" style="font-weight: bold; margin-top: 10px; color: #333; text-align: center;">Mr Don de dieu ISHIMWE</p>
+  <p class="price1" style=" font-size: 18px; color: green; font-weight: bold; text-align: center;">CMO & Co founder</p>
+</div>
+
+</div><br><br><br>
+
+
+<div class="team">
+<div style="width: 20%; height: 110%; display: block; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-left: 20px;">
+  <img src="manager.jpg" alt="ceo" width="100%" height="80%" style="border-top-left-radius: 10px; border-top-right-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+  <p class="name" style="font-weight: bold; margin-top: 10px; color: #333; text-align: center;">Mr Kevin NKUNZIMANA</p>
+  <p class="price1" style=" font-size: 18px; color: green; font-weight: bold; text-align: center;">project manager</p>
+</div>
+
+<div style="width: 20%; height: 110%; display: block; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-left: 20px;">
+  <img src="accountate.jpg" alt="ceo" width="100%" height="80%" style="border-top-left-radius: 10px; border-top-right-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+  <p class="name" style="font-weight: bold; margin-top: 10px; color: #333; text-align: center;">Ms Sonia NIYERA</p>
+  <p class="price1" style=" font-size: 18px; color: green; font-weight: bold; text-align: center;">project director</p>
+</div>
+
+<div style="width: 20%; height: 110%; display: block; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-left: 20px;">
+  <img src="doctor.jpg" alt="ceo" width="100%" height="80%" style="border-top-left-radius: 10px; border-top-right-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+  <p class="name" style="font-weight: bold; margin-top: 10px; color: #333; text-align: center;">Ms Benigne NIHEZAGIRE</p>
+  <p class="price1" style="font-size: 18px; color: green; font-weight: bold; text-align: center;">techinical manager</p>
+</div>
+
+<div style="width: 20%; height: 110%; display: block; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-left: 20px;">
+  <img src="guillome.jpg" alt="ceo" width="100%" height="80%" style="border-top-left-radius: 10px; border-top-right-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+  <p class="name" style="font-weight: bold; margin-top: 10px; color: #333; text-align: center;">Mr Guillome IYUMVA</p>
+  <p class="price1" style="font-size: 18px; color: green; font-weight: bold;text-align: center;">secretiat</p>
+</div>
+
+</div><br><br><br>
+
+
+  <div class="footer">
+  <div class="logo">
+  <img src="intama business group logo.png" alt="wait amoment..." style="width: 50%; height: 38%; margin-top: 80px; margin-left: 80px;">
+  <p style="color: steelblue; margin-left: 80px; font-size: large;"><b><i>intama business group</i></b></p>
+<div class="simage" style="display: block;
+  margin-top: 20px;
+  margin-left: 80px;">
+  <a href=""><img src="facebook.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;</a>
+  <a href=""><img src="instragram.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;</a>
+  <a href=""><img src="tiktok icon.png" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;</a>
+  <a href=""><img src="whatsapp.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;"></a>
+</div>
+</div>
+<div class="find">
+  <h1><strong>Find it Fast</strong></h1>
+  <ul>
+   <a href="laptop1.html"><li>Laptops & Computers</li></a> 
+    <a href="event.html"><li>event managament</li></a>
+    <a href="farming.html"><li>agriculture & farming</li></a>
+     <a href="laptop1.html"><li>Video Games & Consoles</li></a>
+    <a href="laptop1.html"><li>Computer Components</li></a>
+    <a href="construction.html"><li>design,Consultancy Construction</li></a>
+  </ul>
+</div>
+<div class="find">
+  <h1><strong>Customer Care</strong></h1>
+   <ul>
+    <a href="contact.html"><li>Order Tracking</li></a>
+    <a href="construction.html"><li>Wish List</li></a>
+    <a href="laptop1.html"><li>Customer Service</li></a>
+    <a href="contact.html"><li>Returns / Exchange</li></a>
+    <a href="event.html"><li>Product Support</li></a>
+    <a href="index.html"><li>FAQs</li></a>
+  </ul>
+</div>
+<div class="cont">
+  <h1><strong>Contact info</strong></h1>
+   <img src="location 1.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;<a href="">kwarubangura house kigali,Rwanda </a><br>
+  <img src="phone.png" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;<a href="contact.html">Got questions? Call us 24/7!</a> <br><br>
+&emsp;&emsp;&emsp;<a href="contact.html">+250 791 515 197</a><br><br>&emsp;&emsp;&emsp;<a href="contact.html">+250 780 463 063</a>
+</div>
+<br>
+</div>
+<div class="ff">
+   <hr>
+  <div class="online">
+     <p style="text-align: center; margin-top: 17px;">&copy; 2025 INTAMA Business Group. All Rights Reserved.</p>
+<div class="last" style=" margin-left: 500px; display: flex;">
+<p>We Using Safe Payments : </p>
+&emsp;<img src="payment (1).png" alt="" width="40" height="40" style="margin-top: 7px;">&emsp;
+<img src="payment (2).png" alt="" width="40" height="40" style="margin-top: 7px;">&emsp;
+<img src="payment (5).jpg" alt="" width="40" height="40" style="margin-top: 7px;">&emsp;
+<img src="payment (6).png" alt="" width="40" height="40" style="margin-top: 7px;">
+</div>
+</div>
+</div>
+</body>
+</html>

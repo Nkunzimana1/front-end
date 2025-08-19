@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>intama business group</title>
+    <link rel="icon" href="INTAMA Business Group Logo Design.png" type="image/png">
+  <style>
+    .container {
+      position: relative;
+      margin-top: 20px;
+      text-align: center;
+      display: flex;
+    }
+
+    .brand-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+     .brand-title {
+      font-size: 1.5rem;
+      color: black;
+      position: relative;
+      z-index: 2;
+      font-family: "Forte", cursive;
+    }
+
+    .subtitle {
+      font-size: 0.6rem;
+      margin-top: 10px;
+      color: rgb(27, 5, 5);
+      opacity: 0.8;
+    }
+
+    .shopping-icon {
+      font-size: 40px;
+      color: rgb(12, 1, 1);
+      position: absolute;
+      top: 40%;
+      left: -80px;
+      transform: translateY(-50%);
+      animation: slide-across 10s ease-in-out forwards;
+      z-index: 1;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes slide-across {
+      0% {
+        left: -60px;
+        opacity: 0;
+        transform: translateY(-50%) rotate(-20deg);
+      }
+      20% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        left: 100%;
+        opacity: 0;
+        transform: translateY(-50%) rotate(20deg);
+      }
+    }
+    .detail{
+      background-color: whitesmoke;
+      display: flex;
+    }
+    .location {
+      position: relative;
+      margin-top: 30px;
+      text-align: center;
+      display: flex;
+    }
+    .location a{
+      margin-top: 15px;
+      text-decoration: none;
+      color: black;
+    }
+    .location a:hover{
+      margin-top: 15px;
+      text-decoration: underline;
+      color: blue;
+    }
+    .header{
+    color: aqua;
+    top:0;
+    padding: 4px;
+    width: 100vw;
+    height: 50px;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.3rem;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgb(204, 203, 203);
+}
+
+.header a{
+    text-decoration: none;
+    color: black;
+}
+.header a:hover{
+    color: red;
+}
+
+.dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {background-color: green;}
+    .dropdown:hover .dropdown-content {display: block;}
+    :root{
+      --bg:#0f172a;     
+      --card:#111827;     
+      --muted:#94a3b8;    
+      --text:#e5e7eb;      
+      --accent:#22c55e;   
+      --accent-2:#16a34a;  
+      --ring:#22c55e55;
+    }
+    .k {
+        color: black;
+      font-size: 30px;
+      text-align: center;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,whitesmoke);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    header{padding:28px 20px;display:flex;align-items:center;justify-content:center}
+    header h1{margin:0;font-size:clamp(22px,3vw,32px);letter-spacing:.3px}
+    .container1{max-width:1100px;margin:0 auto;padding:0 16px 40px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+    .card{background:linear-gradient(180deg,whitesmoke);border:1px solid whitesmoke;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .img-wrap{position:relative;padding:14px}
+    .img-wrap img{width:100%;height:180px;object-fit:cover;border-radius:12px;border:1px solid whitesmoke}
+    .content{padding:14px 16px 18px}
+    .title{font-weight:600;margin:2px 0 8px;font-size:15px; color: black;}
+    .price{color:#a7f3d0;font-weight:700;margin-bottom:12px; color: #0f172a;}
+    .btn{cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:5px;border:1px solid #1f2937;background:linear-gradient(180deg,#1d293b,#0f1829);color:var(--text);font-weight:600;transition:.15s transform,.2s background,.2s box-shadow}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px var(--ring);background:linear-gradient(180deg,#1f2937)}
+    .badge{display:inline-block;background:#0b8f49;color:white;padding:3px 10px;border-radius:999px;font-size:12px;border:1px solid whitesmoke}
+    footer{color:var(--muted);text-align:center;padding:20px 0 40px;font-size:13px}
+    
+    .footer{
+  background-color: black;
+  height: 70%;
+  margin-top: 40px;
+  display: flex;
+}
+.logo{
+  display: block;
+  margin-right: 70px;
+}  
+.find{
+  color: white;
+  font-family: 'Times New Roman', Times, serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  margin-top: 80px;
+
+}
+.find a{
+  color: white;
+  font-family: 'Times New Roman', Times, serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  margin-top: 80px;
+  text-decoration: none;
+}
+.find a:hover{
+  text-decoration: underline;
+  color: blue;
+}
+.name {
+    font-weight: bold;
+    margin-left: 42px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.cont{
+  color: white;
+  font-family: 'Times New Roman', Times, serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  margin-top: 80px;
+  display: block;
+  margin-left: 80px;
+}
+.cont a{
+  color: white;
+  font-family: 'Times New Roman', Times, serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  margin-top: 80px;
+  text-decoration: none;
+}
+.cont a:hover{
+  text-decoration: underline;
+  color: blue;
+}
+.ff{
+ background-color: black;
+  height: 15%;
+  margin-top: -10px; 
+}
+.online{
+  display: flex;
+  font-size: medium;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+.last{
+   background-color: black;
+  height: 7%; 
+}
+  </style>
+</head>
+<body>
+  <div class="detail">
+  <div class="container">
+    <i class="fas fa-shopping-cart shopping-icon"></i>
+    <div class="brand-box">
+      <div class="brand-title">Intama Business Group</div>
+      <div class="subtitle">Buying better product online & free delivery</div>
+    </div>
+  </div>
+  
+ <div class="location" style="display: flex;">
+    <img src="location.png" alt="" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 20px; margin-right: 10px; margin-left: 60px; border-radius: 15px;"> <a href="">RN3  kwarubangura kigali Rwanda</a>
+ <img src="phone.png" alt="" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 20px; margin-right: 15px; border-radius: 40px; margin-left: 40px; border-radius: 20px;">
+  <a href="">+250 791 515 197</a>
+<div class="media">
+    <img src="shop cart.png" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 40px; margin-right: 15px; border-radius: 0px;">
+ <img src="ig icon.jpg" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 4px; margin-right: 15px; border-radius: 20px;">
+ <img src="facebook.jpg" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 4px; margin-right: 15px; border-radius: 20px;">
+ <img src="email.png" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 4px; margin-right: 15px; border-radius: 20px;">
+ <img src="whatsapp.jpg" style="width: 35px; height:30px; margin-top: 3px; margin-left: 4px; margin-right: 20px; border-radius: 30px;">
+</div>
+  </div>
+     <a href="login.html"  class="btn buy" style="text-decoration: none; margin-top: 30px;">sign up</a>&emsp;&emsp;
+      <a href="login.html" class="btn buy" style="text-decoration: none; margin-top: 30px;">sign in</a><br><br>
+</div>
+</div>
+   <div class="header">
+    &emsp;&emsp;<a href="index.html">home</a>&emsp;&emsp;
+    <a href="about.html">about us</a>&emsp;&emsp;
+     <div class="dropdown">
+  <button style="font-size: 20px; background-color: rgb(204, 203, 203); border: 1px solid  rgb(204, 203, 203);">services</button>&emsp;
+  <div class="dropdown-content">
+    <a href="laptop1.html">Laptops and accessories</a>
+    <a href="construction.html">Design,Consultancy construction</a>
+    <a href="farming.html">agriculture and farming</a>
+    <a href="event.html">event managament</a>
+  </div>
+</div>&emsp;&emsp;
+    <a href="updates.html">updates</a>&emsp;&emsp;
+    <a href="contact.html">contact us</a>
+   </div>
+
+  <h2 class="k"><b> Design,Consultancy construction</b></h2>
+  <p style="color: black; font-size: large; text-align: center;">We are selling high-quality Design,Consultancy construction at affordable prices. Check out our gallery below and click buy now if you like one.</p>
+
+  <div class="container1">
+    <div class="grid" id="products">
+      
+    </div>
+  </div>
+    <div class="footer">
+  <div class="logo">
+  <img src="intama business group logo.png" alt="wait amoment..." style="width: 50%; height: 38%; margin-top: 80px; margin-left: 80px;">
+  <p style="color: steelblue; margin-left: 80px; font-size: large;"><b><i>intama business group</i></b></p>
+<div class="simage" style="display: block;
+  margin-top: 20px;
+  margin-left: 80px;">
+  <a href=""><img src="facebook.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;</a>
+  <a href=""><img src="instragram.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;</a>
+  <a href=""><img src="tiktok icon.png" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;</a>
+  <a href=""><img src="whatsapp.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;"></a>
+</div>
+</div>
+<div class="find">
+  <h1><strong>Find it Fast</strong></h1>
+  <ul>
+   <a href="laptop1.html"><li>Laptops & Computers</li></a> 
+    <a href="event.html"><li>event managament</li></a>
+    <a href="farming.html"><li>agriculture & farming</li></a>
+     <a href="laptop1.html"><li>Video Games & Consoles</li></a>
+    <a href="laptop1.html"><li>Computer Components</li></a>
+    <a href="construction.html"><li>design,Consultancy Construction</li></a>
+  </ul>
+</div>
+<div class="find">
+  <h1><strong>Customer Care</strong></h1>
+   <ul>
+    <a href="contact.html"><li>Order Tracking</li></a>
+    <a href="construction.html"><li>Wish List</li></a>
+    <a href="laptop1.html"><li>Customer Service</li></a>
+    <a href="contact.html"><li>Returns / Exchange</li></a>
+    <a href="event.html"><li>Product Support</li></a>
+    <a href="index.html"><li>FAQs</li></a>
+  </ul>
+</div>
+<div class="cont">
+  <h1><strong>Contact info</strong></h1>
+   <img src="location 1.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;<a href="">kwarubangura house kigali,Rwanda </a><br>
+  <img src="phone.png" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;<a href="contact.html">Got questions? Call us 24/7!</a> <br><br>
+&emsp;&emsp;&emsp;<a href="contact.html">+250 791 515 197</a><br><br>&emsp;&emsp;&emsp;<a href="contact.html">+250 780 463 063</a>
+<br><br>
+</div>
+<br>
+</div>
+<div class="ff">
+   <hr>
+  <div class="online">
+     <p style="text-align: center; margin-top: 17px;">&copy; 2025 INTAMA Business Group. All Rights Reserved.</p>
+<div class="last" style=" margin-left: 500px; display: flex;">
+<p>We Using Safe Payments : </p>
+&emsp;<img src="payment (1).png" alt="" width="40" height="40" style="margin-top: 7px;">&emsp;
+<img src="payment (2).png" alt="" width="40" height="40" style="margin-top: 7px;">&emsp;
+<img src="payment (5).jpg" alt="" width="40" height="40" style="margin-top: 7px;">&emsp;
+<img src="payment (6).png" alt="" width="40" height="40" style="margin-top: 7px;">
+</div>
+</div>
+</div>
+  <script>
+    const ITEMS = [
+      { name: "seesaw", price: 485000, img: "construction (84).jpg" },
+      { name: "panel bars", price: 95000, img: "construction (23).jpg" },
+      { name: "Helmet kit", price: 320000, img: "construction (54).jpg" },
+      { name: "wheel bar", price: 28000, img: "construction (65).jpg" },
+      { name: "kit shover", price: 485000, img: "construction (78).jpg" },
+      { name: "shover Helmet", price: 95000, img: "construction (93).jpg" },
+      { name: "spacebar", price: 320000, img: "construction (16).jpg" },
+      { name: "control Helmet", price: 28000, img: "construction (87).jpg" },
+      { name: "Safety Helmet", price: 485000, img: "construction (10).jpg" },
+      { name: "Kit 45pcs", price: 95000, img: "construction (28).jpg" },
+      { name: "shover", price: 320000, img: "construction (59).jpg" },
+      { name: "backsaw", price: 28000, img: "construction (73).jpg" }
+    ];
+
+    const fmtRWF = n => new Intl.NumberFormat('rw-RW', { style:'currency', currency:'RWF', maximumFractionDigits:0 }).format(n);
+
+    const wrap = document.getElementById('products');
+    wrap.innerHTML = ITEMS.map((p) => `
+      <article class="card">
+        <div class="img-wrap"><img src="${p.img}" alt="${p.name}" loading="lazy" /></div>
+        <div class="content">
+          <div class="title">${p.name}</div>
+          <div class="price">${fmtRWF(p.price)}</div>
+          <button class="btn buy" data-name="${encodeURIComponent(p.name)}" data-price="${p.price}" data-img="${encodeURIComponent(p.img)}">🛒 Buy Now</button>
+        </div>
+      </article>`).join('');
+
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.buy');
+      if(!btn) return;
+      const {name, price, img} = btn.dataset;
+      const url = `check.html?name=${name}&price=${price}&img=${img}`;
+      window.location.href = url;
+    });
+
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

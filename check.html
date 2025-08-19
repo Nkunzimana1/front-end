@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout | Form y'Ibisobanuro</title>
+  <style>
+    :root{
+      --bg:#0f172a;--panel:#0b1220;--border:#1f2937;--muted:#94a3b8;--text:#e5e7eb;--accent:#22c55e;--danger:#ef4444
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#0b1220,#0f172a);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    .shell{min-height:100svh;display:grid;grid-template-columns:1.1fr 1fr}
+    @media (max-width:900px){.shell{grid-template-columns:1fr}}
+    .left{position:relative;padding:22px;border-right:1px solid var(--border)}
+    .right{padding:22px}
+    .card{height:100%;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#10182b,#0f1a2d);box-shadow:0 12px 40px rgba(0,0,0,.35)}
+    .media{height:60vh;min-height:320px;max-height:72vh}
+    .media img{width:100%;height:140%;object-fit:cover}
+    .meta{padding:14px; min-height: 50px; border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between; margin-top: 140px;}
+    .meta .name{font-weight:700}
+    .meta .price{color:whitesmoke;font-weight:800}
+    form{display:grid;gap:14px;margin-top:6px}
+    label{font-size:13px;color:var(--muted)}
+    input,textarea,select{width:100%;padding:12px 12px;border-radius:12px;border:1px solid var(--border);background:#0d1526;color:var(--text);outline:none}
+    input:focus,textarea:focus,select:focus{box-shadow:0 0 0 4px #22c55e33;border-color:#22c55e}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:640px){.row{grid-template-columns:1fr}}
+    .btn{cursor:pointer;padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:linear-gradient(180deg,#1d293b,#0f1829);color:var(--text);font-weight:700}
+    .btn.primary{background:linear-gradient(180deg,#22c55e,#16a34a);border-color:#16a34a;color:#06240f}
+    .btn.clear{background:transparent}
+    .hint{font-size:12px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="left">
+      <div class="card">
+        <div class="media">
+          <img id="pImg" alt="Product image" />
+        </div>
+        <div class="meta">
+          <div class="name" id="pName">—</div>
+          <div class="price" id="pPrice">—</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="right">
+      <h2 style="margin:0 0 12px">Fill this form</h2>
+      <form id="orderForm" onsubmit="event.preventDefault(); alert('thanks your Message already sent'); this.reset();">
+        <div class="row">
+          <div>
+            <label>name of product or service</label>
+            <input type="text" id="fProduct" name="product" readonly />
+          </div>
+          <div>
+            <label>price (RWF)</label>
+            <input type="text" id="fPrice" name="price" readonly />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label>your names</label>
+            <input type="text" name="names" placeholder="ex: Niyonkuru Alice" required />
+          </div>
+          <div>
+            <label>phone number</label>
+            <input type="tel" name="phone" placeholder="07xx xxx xxx" required />
+          </div>
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email" name="email" placeholder="hello@intamabusinessgroup.com" />
+        </div>
+        <div class="row">
+          <div>
+            <label>quantity(Qty)</label>
+            <input type="number" id="qty" name="qty" min="1" value="1" />
+          </div>
+          <div>
+            <label>total price (Auto)</label>
+            <input type="text" id="total" name="total" readonly />
+          </div>
+        </div>
+        <div>
+          <label>message</label>
+          <textarea name="message" rows="4" placeholder="write here your message"></textarea>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button class="btn primary" type="submit">send message</button>
+          <button class="btn clear" type="reset">clear</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    const fmtRWF = n => new Intl.NumberFormat('rw-RW', { style:'currency', currency:'RWF', maximumFractionDigits:0 }).format(n);
+
+    const params = new URLSearchParams(window.location.search);
+    const name = decodeURIComponent(params.get('name') || '');
+    const price = Number(params.get('price') || 0);
+    const img = decodeURIComponent(params.get('img') || '');
+
+    const pImg = document.getElementById('pImg');
+    const pName = document.getElementById('pName');
+    const pPrice = document.getElementById('pPrice');
+
+    if(img) pImg.src = img; else pImg.alt = 'Nta foto yabonetse';
+    pName.textContent = name || 'Izina ritabonetse';
+    pPrice.textContent = price ? fmtRWF(price) : '—';
+
+    const fProduct = document.getElementById('fProduct');
+    const fPrice = document.getElementById('fPrice');
+    fProduct.value = name;
+    fPrice.value = price ? fmtRWF(price) : '';
+    const qtyEl = document.getElementById('qty');
+    const totalEl = document.getElementById('total');
+    const compute = () => {
+      const q = Math.max(1, Number(qtyEl.value || 1));
+      totalEl.value = price ? fmtRWF(price * q) : '';
+    };
+    qtyEl.addEventListener('input', compute);
+    compute();
+  </script>
+</body>
+</html>

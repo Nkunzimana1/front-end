@@ -1,0 +1,269 @@
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>intama business group</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="INTAMA Business Group Logo Design.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="detail">
+     <div class="container1">
+    <i class="fas fa-shopping-cart shopping-icon"></i>
+    <div class="brand-box">
+      <div class="brand-title">Intama Business Group</div>
+      <div class="subtitle">Buying better product online & free delivery</div>
+    </div>
+  </div>
+  
+    <div class="location" style="display: flex;">
+    <img src="location.png" alt="" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 20px; margin-right: 10px; margin-left: 60px; border-radius: 15px;"> <a href="">RN3  kwarubangura kigali Rwanda</a>
+ <img src="phone.png" alt="" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 20px; margin-right: 15px; border-radius: 40px; margin-left: 40px; border-radius: 20px;"> <a href="">+250 791 515 197</a>
+<div class="media">
+    <img src="shop cart.png" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 40px; margin-right: 15px; border-radius: 0px;">
+ <img src="ig icon.jpg" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 4px; margin-right: 15px; border-radius: 20px;">
+ <img src="facebook.jpg" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 4px; margin-right: 15px; border-radius: 20px;">
+ <img src="email.png" style="width: 30px; height: 30px; margin-top: 3px; margin-left: 4px; margin-right: 15px; border-radius: 20px;">
+ <img src="whatsapp.jpg" style="width: 35px; height:30px; margin-top: 3px; margin-left: 4px; margin-right: 20px; border-radius: 30px;">
+</div>
+  </div>
+     <a href="login.html"  class="btn buy" style="text-decoration: none; margin-top: 30px;">sign up</a>&emsp;&emsp;
+      <a href="login.html" class="btn buy" style="text-decoration: none; margin-top: 30px;">sign in</a><br><br>
+</div>
+  
+   <div class="header">
+    &emsp;&emsp;&emsp;<a href="index.html" style="color: green;">home</a>&emsp;&emsp;
+    <a href="about.html">about us</a>&emsp;&emsp;
+    <div class="dropdown">
+  <button style="font-size: 20px; background-color: rgb(204, 203, 203); border: 1px solid  rgb(204, 203, 203);">services</button>&emsp;
+  <div class="dropdown-content">
+    <a href="laptop1.html">Laptops and accessories</a>
+    <a href="construction.html">Design,Consultancy construction</a>
+    <a href="farming.html">agriculture and farming</a>
+    <a href="event.html">event managament</a>
+  </div>
+</div>&emsp;&emsp;
+     <a href="updates.html">updates</a>&emsp;&emsp;
+    <a href="contact.html">contact us</a>&emsp;&emsp;
+   </div> 
+   <div class="body">
+   <div class="FRED">
+        <h1 style="text-align: center; color: whitesmoke; margin-top: 60px;" class="brand"><br><br> WELCOME TO INTAMA BUSINESS GROUP <br><br></h1>
+   </div>
+</div>
+<br><br>
+<h1 style="color: black;  margin-top: 40px; margin-left: 20px;  font-size: xx-large;">Trending Products</h1>
+
+  <div class="container">
+    <div class="grid" id="products">
+      
+    </div>
+  </div>
+  
+<script>
+    const ITEMS = [
+      { name: "Keyboard & headset", price: 79000, img: "keyboard na head st.jpg" },
+      { name: "Laptop Lenovo IdeaPad 3", price: 485000, img: "laptop (7).jpeg" },
+      { name: "Kit 45pcs", price: 95000, img: "construction (28).jpg" },
+      { name: "shover", price: 320000, img: "construction (59).jpg" },
+      { name: "rabbit", price: 15000, img: "farming (3).jpg" },
+      { name: "hen", price: 12000, img: "farming (2).jpg" },
+      { name: "Dell probook i5", price: 500000, img: "laptop (2).jpeg" },
+      { name: "laptop hp  i5", price: 420000, img: "laptop (4).jpeg" }
+    ];
+
+    const fmtRWF = n => new Intl.NumberFormat('rw-RW', { style:'currency', currency:'RWF', maximumFractionDigits:0 }).format(n);
+
+    const wrap = document.getElementById('products');
+    wrap.innerHTML = ITEMS.map((p) => `
+      <article class="card">
+        <div class="img-wrap"><img src="${p.img}" alt="${p.name}" loading="lazy" /></div>
+        <div class="content">
+          <div class="title">${p.name}</div>
+          <div class="price">${fmtRWF(p.price)}</div>
+          <button class="btn buy" data-name="${encodeURIComponent(p.name)}" data-price="${p.price}" data-img="${encodeURIComponent(p.img)}">🛒 Buy Now</button>
+        </div>
+      </article>`).join('');
+
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.buy');
+      if(!btn) return;
+      const {name, price, img} = btn.dataset;
+      const url = `check.html?name=${name}&price=${price}&img=${img}`;
+      window.location.href = url;
+    });
+
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+
+  <br>
+   <h1 style="text-align: left; color: black; margin-top: 40px; margin-left: 20px; font-size: xx-large;">About Us</h1>
+ <div class="about">
+  <div class="story">
+   <h2 style=" color: black;">About Intama Business Group</h2>
+      <p>
+        Intama Business Group is a dynamic Rwandan company dedicated to providing quality solutions 
+        across multiple sectors: technology (computers & accessories), design & construction consultancy, 
+        agriculture and farming, and event management. Founded on a passion for innovation and service 
+        excellence, we offer trusted products and professional services that meet the needs of individuals, 
+        businesses, and communities.
+      </p>
+      <h2 style=" color: black;">Our History</h2>
+      <p>
+        Intama Business Group was established in 2023 by Mr. Eng. IRAMBONA Aime, starting as a small business 
+        specializing in selling computers and accessories. Due to the founder's vision and the growing demand, 
+        the company expanded into design & construction, agriculture & farming, and professional event 
+        management services.
+      </p> 
+  </div>
+  <div class="ceo">
+    <img src="team managers.jpg" alt="wait amoment..." width="95%" height="100%">
+  </div>
+   </div>
+<h1 style="color: black; margin-top: 60px; margin-left: 20px; font-size: xx-large;">Our Products</h1>
+
+  <div class="gallery">
+    <div class="hey">
+      <img src="mouse keyboard headset.jpg" width="80%"   height="40%" alt="">
+      <br>
+      <div class="caption">
+       <h2>&emsp;keybooard , <br> mouse & Headset</h2>
+        <div class="price1">&emsp;Price: 120,000 RWF</div>
+      <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="hey">
+      <img src="keyboard na head st.jpg" width="80%"   height="40%" alt="">
+      <br>
+      <div class="caption">
+      &emsp;&emsp;  <h2>keyboard & Headset</h2>
+        <div class="price1">&emsp;Price: 60,000 RWF</div>
+      <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="hey">
+      <img src="laptop (3).jpeg" width="85%"   height="40%" alt="">
+      <br>
+      <div class="caption">
+      &emsp;&emsp;  <h2>&emsp;App Probook i7</h2>
+        <div class="price1">&emsp;Price: 1.960,000 RWF</div>
+      <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+    </div>
+    <div class="hey">
+      <img src="hdd 1tb 2.jpeg" width="110%"  height="40%"  alt="">
+      <br>
+      <div class="caption">
+      &emsp;&emsp;  <h2>Hard Drive Disk 1TB</h2>
+        <div class="price1">&emsp;Price: 40,000 RWF</div>
+      <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="gallery">
+    <div class="hey">
+      <img src="farming (4).jpg" width="90%"   height="40%" alt="">
+      <br>
+      <div class="caption">
+      &emsp;&emsp;  <h2>&emsp;&emsp;&emsp;Rabbit</h2>
+        <div class="price1">&emsp;Price: 40,000 RWF</div>
+      <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="hey">
+      <img src="event (3).jpg"  alt="">
+      <div class="caption">
+        <h2>located in Kimihurura<br>&emsp; Radison Hotel</h2>
+        <div class="price1">
+         <p class="price1">on full night : 105,000RWF</p>
+      <p class="price1">on full day : 350,000RWF</p> 
+        </div>
+      <a href="#" class="buy-btn">Booking</a>
+      </div>
+    </div>
+
+    <div class="hey">
+     <img src="construction (73).jpg" alt="">
+      <br>
+      <div class="caption">
+      &emsp;&emsp;  <h2>&emsp;&emsp;Shover</h2>
+        <div class="price1">&emsp;Price: 40,000 RWF</div>
+      <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+    </div>
+    <div class="hey">
+      <img src="hdd 1tb original.jpeg" width="100%"    height="40%" alt="">
+      <br>
+      <div class="caption">
+      &emsp;&emsp;  <h2>Hard Drive Disk 1TB</h2>
+        <div class="price1">&emsp;Price: 35,000 RWF</div>
+      <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+    </div>
+  </div>
+  <br>
+<div class="footer">
+  <div class="logo">
+  <img src="intama business group logo.png" alt="wait amoment..." style="width: 50%; height: 38%; margin-top: 80px; margin-left: 80px;">
+  <p style="color: steelblue; margin-left: 80px; font-size: large;"><b><i>intama business group</i></b></p>
+<div class="simage" style="display: block;
+  margin-top: 20px;
+  margin-left: 80px;">
+  <a href=""><img src="facebook.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;</a>
+  <a href=""><img src="instragram.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;</a>
+  <a href=""><img src="tiktok icon.png" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;</a>
+  <a href=""><img src="whatsapp.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;"></a>
+</div>
+</div>
+<div class="find">
+  <h1><strong>Find it Fast</strong></h1>
+  <ul>
+   <a href="laptop1.html"><li>Laptops & Computers</li></a> 
+    <a href="event.html"><li>event managament</li></a>
+    <a href="farming.html"><li>agriculture & farming</li></a>
+     <a href="laptop1.html"><li>Video Games & Consoles</li></a>
+    <a href="laptop1.html"><li>Computer Components</li></a>
+    <a href="construction.html"><li>design,Consultancy Construction</li></a>
+  </ul>
+</div>
+<div class="find">
+  <h1><strong>Customer Care</strong></h1>
+  <ul>
+    <a href="contact.html"><li>Order Tracking</li></a>
+    <a href="construction.html"><li>Wish List</li></a>
+    <a href="laptop1.html"><li>Customer Service</li></a>
+    <a href="contact.html"><li>Returns / Exchange</li></a>
+    <a href="event.html"><li>Product Support</li></a>
+    <a href="index.html"><li>FAQs</li></a>
+  </ul>
+</div>
+<div class="cont">
+  <h1><strong>Contact info</strong></h1>
+   <img src="location 1.jpg" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;<a href="">kwarubangura house kigali,Rwanda </a><br>
+  <img src="phone.png" alt="" style="width: 30px; height: 30px; border-radius: 20px;">&emsp;<a href="contact.html">Got questions? Call us 24/7!</a> <br><br>
+&emsp;&emsp;&emsp;<a href="contact.html">+250 791 515 197</a><br><br>&emsp;&emsp;&emsp;<a href="contact.html">+250 780 463 063</a>
+</div>
+<br>
+</div>
+<div class="ff">
+   <hr>
+  <div class="online">
+     <p style="text-align: center; margin-top: 17px;">&copy; 2025 INTAMA Business Group. All Rights Reserved.</p>
+<div class="last" style=" margin-left: 500px; display: flex;">
+<p>We Using Safe Payments : </p>
+&emsp;<img src="payment (1).png" alt="" width="40" height="40" style="margin-top: 7px;">&emsp;
+<img src="payment (2).png" alt="" width="40" height="40" style="margin-top: 7px;">&emsp;
+<img src="payment (5).jpg" alt="" width="40" height="40" style="margin-top: 7px;">&emsp;
+<img src="payment (6).png" alt="" width="40" height="40" style="margin-top: 7px;">
+</div>
+</div>
+</div>
+</body>
+</html>
